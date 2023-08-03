@@ -28,7 +28,7 @@ Route::get('/doctors', [DoctorController::class, 'index']);
 
 Route::get('/cities/{id_city}/doctors', [DoctorController::class, 'listDoctorsCity']);
 
-Route::post('/user', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store']);
 
 Route::middleware('auth:sanctum')->group(function () {
 

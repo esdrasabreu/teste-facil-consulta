@@ -33,7 +33,7 @@ class PatientController extends Controller
             return response()->json(['error' => $validator->errors()], 400);
         }
 
-        $patient->update($request->all());
+        $patient->update($request->only('name', 'phone'));
         return response()->json($patient, 200);
 
     }
